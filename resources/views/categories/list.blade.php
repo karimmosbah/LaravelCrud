@@ -20,7 +20,7 @@
     <tbody>
         @foreach($categories as $category)
       <tr>
-        <td>{{$loop->index+1}}</td>
+        <td>{{$category->id}}</td>
         <td>{{$category->title}}</td>
         <td>
             <div class="d-flex">
@@ -36,7 +36,7 @@
       @endforeach
     </tbody>
   </table>
-
+{{$categories->links()}}
 </div>
 
 @endsection
